@@ -1,0 +1,23 @@
+/* .category-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-right{
+
+} */
+
+.card-header {
+    display: flex;
+    justify-content: space-between; /* Positions children at the start and end */
+    align-items: center; /* Aligns items vertically */
+    padding: 10px; /* Optional for spacing */
+}
+
+.card-title {
+    margin: 0; /* Resets default margin for h3 */
+}
+
+.btn-right {
+    margin-left: auto; /* Ensures the button is aligned to the end */
+}
