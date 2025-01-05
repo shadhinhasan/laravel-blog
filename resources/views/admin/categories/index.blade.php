@@ -32,8 +32,8 @@
                 <!-- /.card-header -->
                 <div class="card-body">
                     
-                @if (session('status'))
-                  <h6 class="alert alert-success">{{ session('status') }}</h6>
+                @if (session('success'))
+                  <h6 class="alert alert-success">{{ session('success') }}</h6>
                 @endif
 
                 <table class="table table-bordered">
@@ -50,12 +50,13 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $category->name }}</td>
                             <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <form action="{{ route('category.delete', $category->id) }}" method="post">
+                                <a href="{{ route('category.edit', $category->id) }}" class="btn btn-primary">Edit</a>
+                                <!-- <form action="{{ route('category.delete', $category->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
-                                </form>
+                                </form> -->
+                                <a href="{{ route('category.delete', $category->id) }}" type="button" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach

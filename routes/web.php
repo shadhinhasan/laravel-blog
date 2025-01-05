@@ -17,8 +17,11 @@ Route::get('/blog-entries', [HomeController::class, 'blogEntries']);
 Route::get('/post-details', [HomeController::class, 'postDetails']);
 Route::get('/contact-us', [HomeController::class, 'contactUs']);
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
-Route::get('/admin/categories', [CategoryController::class, 'index']);
+Route::get('/admin/categories', [CategoryController::class, 'index'])->name('category.list');
 Route::get('/admin/categories/create', [CategoryController::class, 'create']);
 Route::post('/admin/categories/create', [CategoryController::class, 'store']);
-Route::delete('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('category.delete');
+// Route::delete('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('category.delete');
+Route::get('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('category.delete');
+Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
 
