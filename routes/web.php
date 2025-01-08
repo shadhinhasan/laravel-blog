@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 
@@ -24,4 +25,8 @@ Route::post('/admin/categories/create', [CategoryController::class, 'store']);
 Route::get('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('category.delete');
 Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('category.edit');
 Route::put('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('category.update');
-
+Route::get('/admin/posts', [PostController::class, 'index'])->name('post.list');
+Route::get('/admin/posts/create', [PostController::class, 'create']);
+Route::post('/admin/posts/create', [PostController::class, 'store']);
+Route::get('/admin/posts/{id}/edit', [PostController::class, 'edit'])->name('post.edit');
+Route::put('/admin/posts/{id}/update', [PostController::class, 'update'])->name('post.update');

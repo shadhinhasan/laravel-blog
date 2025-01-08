@@ -50,7 +50,13 @@
               <li class="nav-item">
                 <a href="{{ URL::to('admin/categories')}}" class="nav-link">
                   <i class="nav-icon bi bi-diagram-3"></i>
-                  <p>Categoris</p>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ URL::to('admin/posts')}}" class="nav-link">
+                  <i class="nav-icon bi bi-diagram-3"></i>
+                  <p>Posts</p>
                 </a>
               </li>
               <li class="nav-item">
