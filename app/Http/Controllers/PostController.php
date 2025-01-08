@@ -32,8 +32,10 @@ class PostController extends Controller
 
     public function edit($id){
         $post = Post::findOrFail($id);
+        $categories = Category::all();
+        // dd($post->toArray(), $categories->toArray());
         if ($post) {
-            return view('admin.posts.edit', ['post'=>$post]);
+            return view('admin.posts.edit', ['post'=>$post, 'categories'=>$categories]);
         }
     }
 

@@ -43,8 +43,9 @@
                             <label for="category" class="form-label">Category</label>
                              <select name="category_id" class="form-control">
                                 <option>Select Category</option>
-                                <option value="1">Fashion</option>
-                                <option value="2">Test</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}" {{ $post->category_id===$category->id ? 'selected' : '' }} >{{ $category->name }}</option>
+                                @endforeach
                              </select>
                         </div>
                         <div class="mb-3">
@@ -64,6 +65,7 @@
                     <!--begin::Footer-->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Update</button>
+                        <a href="{{ route('post.list') }}"  class="btn btn-danger">Cancel</a>
                     </div>
                     <!--end::Footer-->
                 </form>

@@ -142,7 +142,7 @@
                         <img src="{{asset('assets/images/'.$post->image)}}" alt="">
                       </div>
                       <div class="down-content">
-                        <span>{{$post->category}}</span>
+                        <span>{{$post->category->name}}</span>
                         <a href="/post-details"><h4>{{$post->title}}</h4></a>
                         <ul class="post-info">
                           <li><a href="#">{{$post->author}}</a></li>
@@ -290,12 +290,9 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="/">- Nature Lifestyle</a></li>
-                        <li><a href="/">- Awesome Layouts</a></li>
-                        <li><a href="/">- Creative Ideas</a></li>
-                        <li><a href="/">- Responsive Templates</a></li>
-                        <li><a href="/">- HTML5 / CSS3 Templates</a></li>
-                        <li><a href="/">- Creative &amp; Unique</a></li>
+                        @foreach($categories as $category)
+                          <li><a href="/">- {{ $category->name }}</a></li>
+                        @endforeach
                       </ul>
                     </div>
                   </div>

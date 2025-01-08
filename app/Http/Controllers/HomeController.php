@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,8 +15,9 @@ class HomeController extends Controller
     public function home(){
         // dd("hello");
         $posts = Post::all();
+        $categories = Category::all();
         // return response()->json($posts);
-        return view("home",['posts'=> $posts ]);
+        return view("home",['posts'=> $posts, 'categories'=>$categories ]);
     }
     
     public function about(){

@@ -63,6 +63,7 @@
                     <!--begin::Footer-->
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="{{ route('post.list') }}"  class="btn btn-danger">Cancel</a>
                     </div>
                     <!--end::Footer-->
                 </form>
