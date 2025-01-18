@@ -17,7 +17,7 @@
                       <ul>
                         @foreach($posts as $post)
                           <li>
-                            <a href="/post-details">
+                            <a href="{{ route('post.details', $post->id) }}">
                               <h5>{{ $post->title }}</h5>
                               <span>{{ $post->created_at->format("M d Y") }}</span>
                             </a>

@@ -33,7 +33,7 @@
                 <!--begin::Form-->
 
 
-                <form action="{{ url('admin/posts/create') }}" method="POST">
+                <form action="{{ url('admin/posts/create') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <!--begin::Body-->
                     <div class="card-body">
@@ -52,7 +52,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <textarea name="description" id="description" class="form-control" placeholder="Type Post Detils" ></textarea>
+                            <textarea rows="10" name="description" id="description" class="form-control" placeholder="Type Post Detils" ></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>

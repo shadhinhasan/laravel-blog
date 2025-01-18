@@ -34,7 +34,7 @@
 
 
 
-                <form action="{{ route('post.update', $post->id) }}" method="POST">
+                <form action="{{ route('post.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                     <!--begin::Body-->
@@ -54,11 +54,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <textarea name="description" id="description" class="form-control" >{{ $post->description }}</textarea>
+                            <textarea rows="15" name="description" id="description" class="form-control post-description" >{{ $post->description }}</textarea>
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="image" name="img" value="{{ $post->img}}" />
+                            <input type="file" class="form-control" id="image" name="image" value="{{ $post->img}}" />
+                        </div>
+                        <div class="mb-3">
+                            <img class=" edit-image" src="{{ asset('uploads/images/'.$post->img) }}" alt="Post Images">
                         </div>
                     </div>
                     <!--end::Body-->

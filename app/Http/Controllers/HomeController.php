@@ -13,8 +13,8 @@ class HomeController extends Controller
     //     return view("home");
     // }
     public function home(){
-        // dd("hello");
-        $posts = Post::all();
+        $posts = Post::orderByDesc('id')->take(5)->get();
+        // dd($posts);
         $categories = Category::all();
         // return response()->json($posts);
         return view("frontend.home",['posts'=> $posts, 'categories'=>$categories ]);

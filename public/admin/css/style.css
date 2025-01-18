@@ -21,3 +21,22 @@
 .btn-right {
     margin-left: auto; /* Ensures the button is aligned to the end */
 }
+
+.post-image{
+    width: 100px;
+    height: 100px;
+}
+
+/* .post-description{
+    width: 300px;
+} */
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 500px !important;
+}
+
+.edit-image{
+    height: 150px;
+  }

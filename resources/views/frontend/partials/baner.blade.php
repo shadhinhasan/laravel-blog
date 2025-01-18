@@ -5,13 +5,13 @@
         <div class="owl-banner owl-carousel">
           @foreach($posts as $post)
             <div class="item">
-              <img src="assets/images/banner-item-01.jpg" alt="">
+              <img src="{{asset('uploads/images/'.$post->img)}}" alt="Post Images">
               <div class="item-content">
                 <div class="main-content">
                   <div class="meta-category">
                     <span>{{ $post->category->name }}</span>
                   </div>
-                  <a href="/"><h4>{{ $post->title }}</h4></a>
+                  <a href="{{ route('post.details', $post->id) }}"><h4>{{ $post->title }}</h4></a>
                   <ul class="post-info">
                     <li><a href="/">Admin</a></li>
                     <li><a href="/">{{date('M d, Y', strtotime($post->created_at))}}</a></li>

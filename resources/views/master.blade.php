@@ -19,6 +19,7 @@
       <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
       <link rel="stylesheet" href="{{ asset('assets/css/templatemo-stand-blog.css')}}">
       <link rel="stylesheet" href="{{ asset('assets/css/owl.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
       <!--
 
       TemplateMo 551 Stand Blog
@@ -41,7 +42,6 @@
 
  
 @include('frontend.partials.header')
-@include('frontend.partials.baner')
 
 @yield('content')
 

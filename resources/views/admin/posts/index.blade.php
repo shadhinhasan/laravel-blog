@@ -52,7 +52,10 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $post->category->name }}</td>
                             <td>{{ $post->title }}</td>
-                            <td>{{ $post->img }}</td>
+                            <td>
+                                <img class="post-image" src="{{ asset('uploads/images/'.$post->img) }}" alt="Post Images">
+                            </td>
+                            {{--<td>{{ $post->img }}</td>--}}
                             <td>
                                 <a href="{{ route('post.edit', $post->id) }}" class="btn btn-primary">Edit</a>
                                 <a href="" type="button" class="btn btn-danger">Delete</a>
