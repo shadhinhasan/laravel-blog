@@ -9,7 +9,7 @@
               <div class="col-sm-6"><h3 class="mb-0">Posts</h3></div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/admin/dashboard">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Posts</li>
                 </ol>
               </div>
@@ -55,6 +55,7 @@
                             <td>{{ $post->img }}</td>
                             <td>
                                 <a href="{{ route('post.edit', $post->id) }}" class="btn btn-primary">Edit</a>
+                                <a href="" type="button" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach

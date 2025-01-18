@@ -17,7 +17,7 @@ class HomeController extends Controller
         $posts = Post::all();
         $categories = Category::all();
         // return response()->json($posts);
-        return view("home",['posts'=> $posts, 'categories'=>$categories ]);
+        return view("frontend.home",['posts'=> $posts, 'categories'=>$categories ]);
     }
     
     public function about(){
